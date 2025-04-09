@@ -1,6 +1,6 @@
 [package]
-name = "rdkafka"
-version = "0.37.0"
+name = "netgauze-rdkafka"
+version = "0.37.1"
 authors = ["Federico Giraud <giraud.federico@gmail.com>"]
 repository = "https://github.com/fede1024/rust-rdkafka"
 readme = "README.md"
@@ -16,7 +16,7 @@ rust-version = "1.70"
 members = ["rdkafka-sys"]
 
 [dependencies]
-rdkafka-sys = { path = "rdkafka-sys", version = "4.8.0", default-features = false }
+netgauze-rdkafka-sys = { path = "rdkafka-sys", version = "4.8.0", default-features = false }
 futures-channel = "0.3.0"
 futures-executor = { version = "0.3.0", optional = true }
 futures-util = { version = "0.3.0", default-features = false }
@@ -48,23 +48,23 @@ tokio = { version = "1.18", features = ["macros", "rt-multi-thread", "time"] }
 [features]
 default = ["libz", "tokio"]
 naive-runtime = ["futures-executor"]
-cmake-build = ["rdkafka-sys/cmake-build"]
-cmake_build = ["rdkafka-sys/cmake_build"]
-dynamic-linking = ["rdkafka-sys/dynamic-linking"]
-dynamic_linking = ["rdkafka-sys/dynamic_linking"]
-ssl = ["rdkafka-sys/ssl"]
-ssl-vendored = ["rdkafka-sys/ssl-vendored"]
-gssapi = ["rdkafka-sys/gssapi"]
-gssapi-vendored = ["rdkafka-sys/gssapi-vendored"]
-sasl = ["rdkafka-sys/sasl"]
-libz = ["rdkafka-sys/libz"]
-libz-static = ["rdkafka-sys/libz-static"]
-curl = ["rdkafka-sys/curl"]
-curl-static = ["rdkafka-sys/curl-static"]
-zstd = ["rdkafka-sys/zstd"]
-zstd-pkg-config = ["rdkafka-sys/zstd-pkg-config"]
-external-lz4 = ["rdkafka-sys/external-lz4"]
-external_lz4 = ["rdkafka-sys/external_lz4"]
+cmake-build = ["netgauze-rdkafka-sys/cmake-build"]
+cmake_build = ["netgauze-rdkafka-sys/cmake_build"]
+dynamic-linking = ["netgauze-rdkafka-sys/dynamic-linking"]
+dynamic_linking = ["netgauze-rdkafka-sys/dynamic_linking"]
+ssl = ["netgauze-rdkafka-sys/ssl"]
+ssl-vendored = ["netgauze-rdkafka-sys/ssl-vendored"]
+gssapi = ["netgauze-rdkafka-sys/gssapi"]
+gssapi-vendored = ["netgauze-rdkafka-sys/gssapi-vendored"]
+sasl = ["netgauze-rdkafka-sys/sasl"]
+libz = ["netgauze-rdkafka-sys/libz"]
+libz-static = ["netgauze-rdkafka-sys/libz-static"]
+curl = ["netgauze-rdkafka-sys/curl"]
+curl-static = ["netgauze-rdkafka-sys/curl-static"]
+zstd = ["netgauze-rdkafka-sys/zstd"]
+zstd-pkg-config = ["netgauze-rdkafka-sys/zstd-pkg-config"]
+external-lz4 = ["netgauze-rdkafka-sys/external-lz4"]
+external_lz4 = ["netgauze-rdkafka-sys/external_lz4"]
 
 [package.metadata.docs.rs]
 # docs.rs doesn't allow writing to ~/.cargo/registry (reasonably), so we have to
